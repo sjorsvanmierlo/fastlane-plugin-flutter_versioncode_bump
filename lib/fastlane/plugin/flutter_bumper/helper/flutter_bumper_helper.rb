@@ -50,6 +50,8 @@ module Fastlane
         splitted_version = full_version.split('+')
 
         version_name = splitted_version[0]
+
+        # TODO: Add support for (0001) version codes
         version_code = splitted_version[1]
 
         # Increment the version code by the increment (default: +1);

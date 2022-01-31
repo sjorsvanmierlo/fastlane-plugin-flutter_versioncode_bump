@@ -7,27 +7,24 @@ module Fastlane
     class FlutterBumperAction < Action
       def self.run(params)
         # Retrieve given params
-        if params != nil
-  
-            pubspec_location = params[:pubspec_location]
-            version_code_increment = params[:version_code_increment]
+        pubspec_location = params[:pubspec_location]
+        version_code_increment = params[:version_code_increment]
 
-            UI.message("Let's bump the flutter version code with an increment of #{version_code_increment}!")
+        UI.message("Let's bump the flutter version code with an increment of #{version_code_increment}!")
 
-            # Retrieve the full version of the given pubspec.yaml location
-            full_version = Helper::FlutterBumperHelper.retrieve_full_version(pubspec_location)
-            UI.message('Current version is:'.dup.concat(full_version))
+        # Retrieve the full version of the given pubspec.yaml location
+        full_version = Helper::FlutterBumperHelper.retrieve_full_version(pubspec_location)
+        UI.message('Current version is:'.dup.concat(full_version))
 
-            # Bump the version code of the full version by the increment that is given
-            full_version = Helper::FlutterBumperHelper.bump_version_code(full_version, version_code_increment)
-            
-            # Update the version code of the pubspec.yaml
-            Helper::FlutterBumperHelper.write_full_version(pubspec_location, full_version)
-            UI.success('Succesfully bumped flutter version to: ' + full_version.to_s)
-            {
-              'version' => full_version
-            }
-        end
+        # Bump the version code of the full version by the increment that is given
+        full_version = Helper::FlutterBumperHelper.bump_version_code(full_version, version_code_increment)
+        
+        # Update the version code of the pubspec.yaml
+        Helper::FlutterBumperHelper.write_full_version(pubspec_location, full_version)
+        UI.success('Succesfully bumped flutter version to: ' + full_version.to_s)
+        {
+          'version' => full_version
+        }
       end
 
       def self.description
@@ -58,7 +55,7 @@ module Fastlane
                                description: "The location of the pubspec.yaml",
                                   optional: true,
                                       type: String,
-                                      default_value: '../pubspec.yaml'),
+                                      default_value: 'pubspec.yaml'),
           FastlaneCore::ConfigItem.new(key: :version_code_increment,
                                   env_name: "VERSION_CODE_INCREMENT",
                                description: "The increment of the version code",
