@@ -5,12 +5,12 @@ module Fastlane
   UI = FastlaneCore::UI unless Fastlane.const_defined?("UI")
 
   module Helper
-    class FlutterBumperHelper
+    class FlutterVersioncodeBumpHelper
       # class methods that you define here become available in your action
-      # as `Helper::FlutterBumperHelper.your_method`
+      # as `Helper::FlutterVersioncodeBumpHelper.your_method`
       #
       def self.show_message
-        UI.message("Hello from the flutter_bumper plugin helper!")
+        UI.message("Hello from the flutter_versioncode_bump plugin helper!")
       end
 
       def self.retrieve_full_version(pubspec_location)

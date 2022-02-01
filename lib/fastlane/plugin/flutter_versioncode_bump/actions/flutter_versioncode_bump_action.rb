@@ -1,10 +1,10 @@
 require 'fastlane/action'
 require 'yaml'
-require_relative '../helper/flutter_bumper_helper'
+require_relative '../helper/flutter_versioncode_bump_helper'
 
 module Fastlane
   module Actions
-    class FlutterBumperAction < Action
+    class FlutterVersioncodeBumpAction < Action
       def self.run(params)
         # Retrieve given params
         pubspec_location = params[:pubspec_location]
@@ -13,14 +13,14 @@ module Fastlane
         UI.message("Let's bump the flutter version code with an increment of #{version_code_increment}!")
 
         # Retrieve the full version of the given pubspec.yaml location
-        full_version = Helper::FlutterBumperHelper.retrieve_full_version(pubspec_location)
+        full_version = Helper::FlutterVersioncodeBumpHelper.retrieve_full_version(pubspec_location)
         UI.message('Current version is:'.dup.concat(full_version))
 
         # Bump the version code of the full version by the increment that is given
-        full_version = Helper::FlutterBumperHelper.bump_version_code(full_version, version_code_increment)
+        full_version = Helper::FlutterVersioncodeBumpHelper.bump_version_code(full_version, version_code_increment)
         
         # Update the version code of the pubspec.yaml
-        Helper::FlutterBumperHelper.write_full_version(pubspec_location, full_version)
+        Helper::FlutterVersioncodeBumpHelper.write_full_version(pubspec_location, full_version)
         UI.success('Succesfully bumped flutter version to: ' + full_version.to_s)
         {
           'version' => full_version

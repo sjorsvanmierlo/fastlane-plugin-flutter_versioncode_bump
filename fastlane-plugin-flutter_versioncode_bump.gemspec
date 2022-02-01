@@ -1,15 +1,15 @@
 lib = File.expand_path("lib", __dir__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'fastlane/plugin/flutter_bumper/version'
+require 'fastlane/plugin/flutter_versioncode_bump/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = 'fastlane-plugin-flutter_bumper'
-  spec.version       = Fastlane::FlutterBumper::VERSION
+  spec.name          = 'fastlane-plugin-flutter_versioncode_bump'
+  spec.version       = Fastlane::FlutterVersioncodeBump::VERSION
   spec.author        = 'Sjors van Mierlo'
   spec.email         = 'spmvm.95@gmail.com'
 
   spec.summary       = 'Bump the flutter version code'
-  # spec.homepage      = "https://github.com/<GITHUB_USERNAME>/fastlane-plugin-flutter_bumper"
+  # spec.homepage      = "https://github.com/<GITHUB_USERNAME>/fastlane-plugin-flutter_versioncode_bump"
   spec.license       = "MIT"
 
   spec.files         = Dir["lib/**/*"] + %w(README.md LICENSE)

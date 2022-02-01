@@ -1,16 +1,16 @@
-# flutter_bumper plugin
+# flutter_versioncode_bump plugin
 
-[![fastlane Plugin Badge](https://rawcdn.githack.com/fastlane/fastlane/master/fastlane/assets/plugin-badge.svg)](https://rubygems.org/gems/fastlane-plugin-flutter_bumper)
+[![fastlane Plugin Badge](https://rawcdn.githack.com/fastlane/fastlane/master/fastlane/assets/plugin-badge.svg)](https://rubygems.org/gems/fastlane-plugin-flutter_versioncode_bump)
 
 ## Getting Started
 
-This project is a [_fastlane_](https://github.com/fastlane/fastlane) plugin. To get started with `fastlane-plugin-flutter_bumper`, add it to your project by running:
+This project is a [_fastlane_](https://github.com/fastlane/fastlane) plugin. To get started with `fastlane-plugin-flutter_versioncode_bump`, add it to your project by running:
 
 ```bash
-fastlane add_plugin flutter_bumper
+fastlane add_plugin flutter_versioncode_bump
 ```
 
-## About flutter_bumper
+## About flutter_versioncode_bump
 
 Bump the flutter version code
 
