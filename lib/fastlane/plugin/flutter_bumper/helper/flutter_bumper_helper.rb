@@ -41,9 +41,7 @@ module Fastlane
 
 
       def self.bump_version_code(full_version, increment)
-      
         if !full_version.include?('+')
-          # UI.error("No version code to bump :( ! Add a version code (example: 1.0.0+0001)")
           raise 'No version code to bump :( ! Add a version code (example: 1.0.0+0001)'
         end
 
