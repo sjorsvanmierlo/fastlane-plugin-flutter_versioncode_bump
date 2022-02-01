@@ -9,7 +9,7 @@ Gem::Specification.new do |spec|
   spec.email         = 'spmvm.95@gmail.com'
 
   spec.summary       = 'Bump the flutter version code'
-  # spec.homepage      = "https://github.com/<GITHUB_USERNAME>/fastlane-plugin-flutter_versioncode_bump"
+  spec.homepage      = "https://github.com/spmvanmierlo/fastlane-plugin-flutter_versioncode_bump"
   spec.license       = "MIT"
 
   spec.files         = Dir["lib/**/*"] + %w(README.md LICENSE)
