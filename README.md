@@ -1,6 +1,6 @@
 # flutter_versioncode_bump plugin
 
-[![fastlane Plugin Badge](https://rawcdn.githack.com/fastlane/fastlane/master/fastlane/assets/plugin-badge.svg)](https://rubygems.org/gems/fastlane-plugin-flutter_versioncode_bump)
+[![fastlane Plugin Badge](https://rawcdn.githack.com/fastlane/fastlane/master/fastlane/assets/plugin-badge.svg)](https://rubygems.org/gems/fastlane-plugin-flutter_versioncode_bump) [![Gem Version](https://badge.fury.io/rb/fastlane-plugin-flutter_versioncode_bump.svg)](https://badge.fury.io/rb/fastlane-plugin-flutter_versioncode_bump)
 
 ## Getting Started
 
