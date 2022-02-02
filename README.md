@@ -12,15 +12,11 @@ fastlane add_plugin flutter_versioncode_bump
 
 ## About flutter_versioncode_bump
 
-Bump the flutter version code
-
-**Note to author:** Add a more detailed description about this plugin here. If your plugin contains multiple actions, make sure to mention them here.
+Bump the flutter version code. This plugin requires that the `version:` option is used of the Flutter project its pubspec.yaml. It bumps the versioncode with +1 or the given increment. Supported versioncode examples are: `+0`, `+0001`, `+2022010001` etc. Checkout the [Flutter documentation](https://docs.flutter.dev/development/tools/pubspec) for more information about the pubspec or versioncode.
 
 ## Example
 
-Check out the [example `Fastfile`](fastlane/Fastfile) to see how to use this plugin. Try it by cloning the repo, running `fastlane install_plugins` and `bundle exec fastlane test`.
-
-**Note to author:** Please set up a sample project to make it easy for users to explore what your plugin does. Provide everything that is necessary to try out the plugin in this project (including a sample Xcode/Android project if necessary)
+Check out the [example `Fastfile`](fastlane/Fastfile) to see how to use this plugin. Try it by cloning the repo, running `fastlane install_plugins` and `bundle exec fastlane test`. There is a [example `pubspec.yaml`](pubspec.yaml) available to bump the version code of.
 
 ## Run tests for this plugin
 
