@@ -18,6 +18,22 @@ Bump the flutter version code. This plugin requires that the `version:` option i
 
 Check out the [example `Fastfile`](fastlane/Fastfile) to see how to use this plugin. Try it by cloning the repo, running `fastlane install_plugins` and `bundle exec fastlane test`. There is a [example `pubspec.yaml`](pubspec.yaml) available to bump the version code of.
 
+Add `flutter_versioncode_bump` to your Fastfile to use it with the default options. [example `Fastfile`](fastlane/Fastfile)
+
+or override the options in the Fastfile. Example:
+```
+flutter_versioncode_bump({
+    pubspec_location: "./pubspec.yaml", # Changes the location of the pubspec.yaml
+    version_code_increment: 1           # Changes the increment of the bump
+})
+```
+
+Environment variables can also be used. Example:
+```
+PUBSPEC_LOCATION        # Changes the location of the pubspec.
+VERSION_CODE_INCREMENT  # Changes the increment of the bump
+```
+
 ## Run tests for this plugin
 
 To run both the tests, and code style validation, run
