@@ -44,6 +44,18 @@ describe Fastlane::Actions::FlutterVersioncodeBumpAction do
       expect { Fastlane::Actions::FlutterVersioncodeBumpAction.run(params) }.to raise_error(RuntimeError)
     end
 
+    it 'Bump versioncode 0.0.0+0 to 0.0.0+1 and do not bump the dependency called version' do
+      # Arrange
+      expected_pubspec_as_text = "version: 0.0.0+1\ndependencies:\n  version: ^3.0.2\n"
+      pubspec_location = "#{pubspec_sources_folder}test-pubspec-7.yaml"
+      params = { pubspec_location: pubspec_location, version_code_increment: 1 }
+      # Act
+      Fastlane::Actions::FlutterVersioncodeBumpAction.run(params)
+      actual_pubspec_as_text = File.read(pubspec_location)
+      # Assert
+      expect(expected_pubspec_as_text).to eq(actual_pubspec_as_text)
+    end
+
     after do
       clean_prepared_pubspecs
     end

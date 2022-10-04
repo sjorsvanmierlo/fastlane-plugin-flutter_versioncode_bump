@@ -21,7 +21,7 @@ module Fastlane
         pubspec_as_text = File.read(pubspec_location)
 
         # Apply regex to edit the version line
-        pubspec_new_content = pubspec_as_text.gsub(/version:.*/, "version: #{version}")
+        pubspec_new_content = pubspec_as_text.sub(/version:.*/, "version: #{version}")
 
         # Write updated content to pubspec
         File.open(pubspec_location, 'w') { |file| file.puts(pubspec_new_content) }
